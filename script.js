@@ -200,11 +200,12 @@ function getSongAudio(){
 }
 function startMusic(){
   if(!musicEnabled||birthdayPlaying||musicOn)return;
-  musicOn=true;$('#musicBtn').textContent='🎶';
   if(CONFIG.songURL){ // real song file
-    getSongAudio().play().catch(()=>{});
+    const audio=getSongAudio();
+    audio.play().then(()=>{musicOn=true;}).catch(()=>{musicOn=false;});
     return;
   }
+  musicOn=true;
   if(!ac())return;
   let chord=0,step=0;
   const playStep=()=>{
@@ -223,7 +224,13 @@ function startMusic(){
 function stopMusic(){
   musicOn=false;clearTimeout(musicTimer);musicTimer=null;
   if(songAudio)songAudio.pause();
-  $('#musicBtn').textContent='🎵';
+}
+function restartMusic(){
+  musicEnabled=true;
+  birthdayPlaying=false;
+  stopMusic();
+  if(songAudio)songAudio.currentTime=0;
+  startMusic();
 }
 function pauseForBirthday(){
   birthdayPlaying=true;
@@ -251,17 +258,10 @@ function playHappyBirthday(){
     resumeAfterBirthday();
   },(when+1)*1000);
 }
-$('#musicBtn').addEventListener('click',()=>{
-  ac();
-  musicEnabled=!musicEnabled;
-  if(musicEnabled){startMusic();toast('🎶 Sweet music on');}
-  else{stopMusic();toast('Music off');}
-});
 $('#resetBtn').addEventListener('click',()=>{
   store.del('bday-progress');
   fireworksStop();
-  stopMusic();
-  birthdayPlaying=false;
+  restartMusic();
   clearTimeout(introRevealTimer);
   introRevealRun++;
   introRevealStarted=false;
