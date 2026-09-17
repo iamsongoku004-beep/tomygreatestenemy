@@ -7,7 +7,7 @@ const CONFIG = {
   //   To play the REAL song: put an MP3 file next to index.html and set its name here,
   //   or paste a full URL. Example:  songURL: "mitski.mp3",
   //   Leave it as "" to use the built-in music-box arrangement of the song instead.
-  songURL: "",
+  songURL: "mitski.mp3",
   letter: `Dear you,
 
 Happy birthday! 🎂
