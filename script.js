@@ -195,14 +195,24 @@ const SONG_CHORDS=[
 ];
 let songAudio=null;
 function getSongAudio(){
-  if(!songAudio){songAudio=new Audio(CONFIG.songURL);songAudio.loop=true;songAudio.volume=.75;songAudio.preload='auto';}
+  if(!songAudio){
+    songAudio=new Audio(CONFIG.songURL);
+    songAudio.loop=true;
+    songAudio.volume=.75;
+    songAudio.preload='auto';
+  }
   return songAudio;
 }
 function startMusic(){
   if(!musicEnabled||birthdayPlaying||musicOn)return;
   if(CONFIG.songURL){ // real song file
     const audio=getSongAudio();
-    audio.play().then(()=>{musicOn=true;}).catch(()=>{musicOn=false;});
+    audio.play().then(()=>{
+      musicOn=true;
+    }).catch(()=>{
+      // Browsers may block audible autoplay; a later user interaction retries it.
+      musicOn=false;
+    });
     return;
   }
   musicOn=true;
@@ -613,9 +623,16 @@ function enter_future(){const fe=$('#futureEnd');fe.style.opacity='0';
 ================================================================ */
 show(Math.min(progress,ORDER.length-1));
 
-// Try autoplay on the opening screen; browsers may wait for the first tap.
-window.addEventListener('load',()=>{startMusic();startIntroReveal();});
-document.addEventListener('pointerdown',()=>startMusic(),{once:true});
+// Try autoplay immediately. Browsers may block audible autoplay until any interaction.
+window.addEventListener('load',()=>{
+  startMusic();
+  startIntroReveal();
+});
+
+// Retry after the first interaction if autoplay was blocked.
+['pointerdown','keydown','touchstart'].forEach(eventName=>{
+  document.addEventListener(eventName,()=>startMusic(),{once:true,passive:true});
+});
 
 /* ============ INTRO MOON SCENE — starfield ============ */
 (function(){const c=document.getElementById('msStars');if(!c)return;
