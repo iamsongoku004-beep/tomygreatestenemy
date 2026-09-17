@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="styles.css">
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+<canvas id="sky"></canvas>
+<canvas id="fx"></canvas>
+<div id="progressBar"></div>
+
+<div id="controls">
+  <button class="icon-btn" id="musicBtn" title="Music">🎵</button>
+  <button class="icon-btn" id="resetBtn" title="Restart">↺</button>
+</div>
+
+<!-- 1. INTRO -->
+<section class="screen" id="s-intro">
+  <div id="introDecor"></div>
+
+<!-- 🌙 MOON SCENE : two boys watching the moon grow -->
+<div id="moonScene" aria-hidden="true">
+  <div id="msStars"></div>
+  <div class="ms-shoot"></div>
+  <div class="ms-cloud cl1"></div>
+  <div class="ms-cloud cl2"></div>
+  <div class="ms-moon"><div class="ms-halo"></div><i class="c1"></i><i class="c2"></i><i class="c3"></i></div>
+  <div class="ms-hill far"></div>
+  <div class="ms-hill near"></div>
+  <svg class="ms-boys" viewBox="0 0 200 135">
+    <g class="boy b1">
+      <ellipse cx="55" cy="112" rx="34" ry="4.5" fill="rgba(2,6,23,.45)"/>
+      <path d="M44,62 C60,66 72,84 72,108 L34,108 C30,96 28,88 35,79 C39,72 40,66 44,62 Z" fill="#16295e"/>
+      <ellipse cx="37" cy="83" rx="10" ry="12" fill="#16295e" transform="rotate(-18 37 83)"/>
+      <path d="M50,66 C44,72 40,78 39,86" stroke="#16295e" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M63,64 C70,76 72,90 71,104" stroke="#93c5fd" stroke-width="1.6" fill="none" opacity=".35" stroke-linecap="round"/>
+      <g transform="rotate(-14 52 48)">
+        <circle cx="52" cy="48" r="13" fill="#16295e"/>
+        <path d="M41,40 Q36,30 46,32 Q41,34 43,41 Z" fill="#16295e"/>
+        <path d="M46,36 A13,13 0 0 1 63,44" stroke="#93c5fd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".9"/>
+        <circle cx="58" cy="45" r="1.8" fill="#dbeafe"/>
+      </g>
+    </g>
+    <g class="boy b2" transform="translate(84,26) scale(0.78)">
+      <ellipse cx="55" cy="112" rx="34" ry="4.5" fill="rgba(2,6,23,.45)"/>
+      <path d="M44,62 C60,66 72,84 72,108 L34,108 C30,96 28,88 35,79 C39,72 40,66 44,62 Z" fill="#1d3570"/>
+      <ellipse cx="37" cy="83" rx="10" ry="12" fill="#1d3570" transform="rotate(-18 37 83)"/>
+      <path d="M50,66 C44,72 40,78 39,86" stroke="#1d3570" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M63,64 C70,76 72,90 71,104" stroke="#93c5fd" stroke-width="1.6" fill="none" opacity=".35" stroke-linecap="round"/>
+      <g transform="rotate(-14 52 48)">
+        <circle cx="52" cy="48" r="13" fill="#1d3570"/>
+        <path d="M44,38 Q47,27 52,34 Q47,33 46,40 Z" fill="#1d3570"/>
+        <path d="M46,36 A13,13 0 0 1 63,44" stroke="#93c5fd" stroke-width="2" fill="none" stroke-linecap="round" opacity=".9"/>
+        <circle cx="58" cy="45" r="1.8" fill="#dbeafe"/>
+      </g>
+    </g>
+  </svg>
+</div>
+  <p class="sub" id="introMessage"></p>
+  <h1 id="introName">My Love</h1>
+  <button class="btn hidden" id="startBtn">🎁 Open Your Surprise</button>
+</section>
+
+<!-- 2. ENVELOPE -->
+<section class="screen" id="s-envelope">
+  <h2>💌 You have one special letter</h2>
+  <div class="envelope" id="envelope">
+    <div class="env-letter">💌</div>
+    <div class="env-body"></div>
+    <div class="env-flap"></div>
+  </div>
+  <div class="typewriter hidden" id="letterBox"><span id="letterText"></span><span class="tw-cursor"></span></div>
+  <button class="btn hidden" id="envNext">There’s more… ❤️</button>
+</section>
+
+<!-- 3. BALLOONS -->
+<section class="screen" id="s-balloons">
+  <h2>Before we continue…</h2>
+  <p class="sub" id="balloonHint">Pop 5 balloons. 🎈</p>
+  <div id="balloonField"></div>
+  <button class="btn hidden" id="balloonNext">Okay… you’re ready for the next surprise →</button>
+</section>
+
+<!-- 4. GALLERY -->
+<section class="screen" id="s-gallery">
+  <h2>Little Moments, Big Memories ❤️</h2>
+  <p class="sub">Tap a photo to relive it.</p>
+  <div class="gallery" id="gallery"></div>
+  <button class="btn" id="galleryNext">Keep going ❤️</button>
+</section>
+
+<!-- 5. REASONS -->
+<section class="screen" id="s-reasons">
+  <h2>Why I Love You</h2>
+  <button id="reasonBtn">💗</button>
+  <p class="sub small">TAP TO FIND OUT WHY</p>
+  <div id="reasonList"></div>
+  <p class="sub hidden" id="reasonEnd">And honestly… I could keep going forever. ❤️</p>
+  <button class="btn hidden" id="reasonsNext">Next 🎮</button>
+</section>
+
+<!-- 6. QUIZ -->
+<section class="screen" id="s-quiz">
+  <h2>Boyfriend Challenge 😌</h2>
+  <p class="sub">Let’s see if you really know your girlfriend.</p>
+  <div class="quiz-card">
+    <div class="progress-dots" id="quizDots"></div>
+    <div class="q-text" id="quizQ"></div>
+    <div id="quizOpts"></div>
+    <div id="quizFeedback"></div>
+  </div>
+  <button class="btn hidden" id="quizNext">Continue 🫂</button>
+</section>
+
+<!-- 7. HUG -->
+<section class="screen" id="s-hug">
+  <h2>You deserve a hug.</h2>
+  <div id="hugHeart">❤️</div>
+  <p class="sub hidden" id="hugMsg">Consider yourself hugged. ❤️<br><small>Actual hug coming when I see you.</small></p>
+  <button class="btn hidden" id="hugNext">One more thing… 🌱</button>
+</section>
+
+<!-- 8. GARDEN -->
+<section class="screen" id="s-garden">
+  <h2>Let’s grow something together.</h2>
+  <p class="sub">Every click plants a little piece of us.</p>
+  <div id="gardenPlot"></div>
+  <button class="btn" id="plantBtn">🌱 Plant a flower</button>
+  <div class="legend hidden" id="gardenLegend">
+    <span>🌹 Love</span><span>🌻 Happiness</span><span>🌷 Memories</span>
+    <span>🌸 Laughter</span><span>🌺 Future</span>
+  </div>
+  <p class="sub hidden" id="gardenMsg">Just like this garden, I hope we keep growing together. 🌱</p>
+  <button class="btn hidden" id="gardenNext">Now… the important part 🎂</button>
+</section>
+
+<!-- 9. CAKE -->
+<section class="screen" id="s-cake">
+  <h2>Make a Wish. ✨</h2>
+  <div class="cake" id="cake">
+    <div class="plate"></div>
+    <div class="layer l1"></div>
+    <div class="layer l2"><div class="drip"></div></div>
+    <div class="layer l3"><div class="drip"></div></div>
+    <div class="candle" style="left:32%"><div class="flame"></div></div>
+    <div class="candle" style="left:48%"><div class="flame"></div></div>
+    <div class="candle" style="left:64%"><div class="flame"></div></div>
+  </div>
+  <button class="btn" id="blowBtn">🎂 Blow Out the Candles</button>
+  <button class="btn hidden" id="cakeNext">One more thing… 🎁</button>
+</section>
+
+<!-- 10. GIFT -->
+<section class="screen" id="s-gift">
+  <h2>Wait… I almost forgot.</h2>
+  <p class="sub">ONE LAST SURPRISE 🎁</p>
+  <div id="giftBox">
+    <div class="gift-glow"></div>
+    <div class="gift-body">
+      <div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div>
+    </div>
+    <div class="gift-lid"><div class="gift-ribbon-v"></div></div>
+    <div class="gift-bow">🎀</div>
+  </div>
+  <div class="typewriter hidden" id="giftMsg"><span id="giftText"></span><span class="tw-cursor"></span></div>
+  <button class="btn hidden" id="giftNext">Look up… 🌌</button>
+</section>
+
+<!-- 11. NIGHT SKY -->
+<section class="screen" id="s-night">
+  <div class="night-lines">
+    <p class="night-line">Another year of you. ✨</p>
+    <p class="night-line">Another year of memories. ❤️</p>
+    <p class="night-line">Another year of me being lucky enough to love you.</p>
+    <h1 class="night-line big">Happy Birthday, MY BABY. ❤️</h1>
+    <p class="night-line">I hope this year brings you everything you’ve been wishing for.</p>
+  </div>
+  <button class="btn hidden" id="nightNext">♾️ What Comes Next?</button>
+</section>
+
+<!-- 12. FUTURE -->
+<section class="screen" id="s-future">
+  <h2>Things I still want to do with you…</h2>
+  <div class="bucket" id="bucket"></div>
+  <p class="sub" id="futureEnd">“This isn’t the end of our story.”<br>“It’s just another chapter.” ❤️</p>
+</section>
+
+<div id="lightbox"><div class="lb-photo" id="lbPhoto"></div><div class="lb-meta" id="lbMeta"></div></div>
+<div id="toast"></div>
+<div id="fwLabel">🎉 HAPPY BIRTHDAY, MY BABY! 🎉</div>
+
+<script src="script.js"></script>
+</body>
+</html>
