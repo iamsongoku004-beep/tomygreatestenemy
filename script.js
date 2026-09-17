@@ -196,7 +196,7 @@ const SONG_CHORDS=[
 let songAudio=null;
 function getSongAudio(){
   if(!songAudio){
-    songAudio=new Audio(CONFIG.songURL);
+    songAudio=document.getElementById('bgMusic') || new Audio('./mitski.mp3');
     songAudio.loop=true;
     songAudio.volume=.75;
     songAudio.preload='auto';
@@ -204,13 +204,14 @@ function getSongAudio(){
   return songAudio;
 }
 function startMusic(){
-  if(!musicEnabled||birthdayPlaying||musicOn)return;
+  if(!musicEnabled||birthdayPlaying)return;
   if(CONFIG.songURL){ // real song file
     const audio=getSongAudio();
+    audio.muted=false;
     audio.play().then(()=>{
       musicOn=true;
     }).catch(()=>{
-      // Browsers may block audible autoplay; a later user interaction retries it.
+      // Audible autoplay may be blocked until the visitor interacts.
       musicOn=false;
     });
     return;
@@ -235,6 +236,15 @@ function stopMusic(){
   musicOn=false;clearTimeout(musicTimer);musicTimer=null;
   if(songAudio)songAudio.pause();
 }
+
+// Retry playback after any real interaction, including the first button click.
+['pointerdown','keydown','touchstart'].forEach(eventName=>{
+  document.addEventListener(eventName,()=>{
+    const audio=getSongAudio();
+    audio.muted=false;
+    startMusic();
+  },{passive:true});
+});
 function restartMusic(){
   musicEnabled=true;
   birthdayPlaying=false;
