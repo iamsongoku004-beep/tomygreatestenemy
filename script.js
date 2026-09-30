@@ -41,14 +41,14 @@ Forever sounds good with you. ❤️`,
     "I'm really lucky to have you. 🍀"
   ],
   photos: [ // replace <div> with <img src="..."> for real photos
-    {img:'<img src="1.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Our first date 📅", place:"That little café 📍", cap:"Where it all began ☕"},    
-    {img:'<img src="aef63d22-3485-424b-b232-70156e70d47b-ezgif.com-video-to-gif-converter.gif" style="width:100%;height:100%;object-fit:cover;">', date:"Road trip 📅", place:"Everywhere & nowhere 📍", cap:"Wrong turns, right person 🚗"},
-    {img:'<img src="4.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Road trip 📅", place:"Everywhere & nowhere 📍", cap:"Wrong turns, right person 🚗"},
-    {img:'<img src="5.jpg" style="width:100%;height:100%;object-fit:cover;">',date:"Last birthday 📅", place:"Home 📍", cap:"One of my favorite days with you 🥰"},
-    {img:'<img src="6.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Random Tuesday 📅", place:"Kitchen 📍", cap:"We burnt the pasta. Worth it. 🍝😂"},
-    {img:'<img src="7.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Random Tuesday 📅", place:"Kitchen 📍", cap:"We burnt the pasta. Worth it. 🍝😂"},
-    {img:'<img src="8.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Random Tuesday 📅", place:"Kitchen 📍", cap:"We burnt the pasta. Worth it. 🍝😂"},
-   {img:'<img src="c6ee158d-7ad3-4caa-b7fd-f6a379badaca-ezgif.com-video-to-gif-converter.gif" style="width:100%;height:100%;object-fit:cover;">', date:"Road trip 📅", place:"Everywhere & nowhere 📍", cap:"Wrong turns, right person 🚗"}, 
+    {img:'<img src="1.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Our first date 📅", place:"That little café 📍", cap:"Where it all began.☕"},    
+    {img:'<img src="aef63d22-3485-424b-b232-70156e70d47b-ezgif.com-video-to-gif-converter.gif" style="width:100%;height:100%;object-fit:cover;">', date:"Night Out 📅", place:"Photo Booth 📍", cap:"Cutie pics.🤪"},
+    {img:'<img src="4.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"12/27/2026 📅", place:"Parking Lot 📍", cap:"Couple Outfits.🥰"},
+    {img:'<img src="5.jpg" style="width:100%;height:100%;object-fit:cover;">',date:"12/28/2025 📅", place:"Somewhere 📍", cap:"Double Date.🍝"},
+    {img:'<img src="6.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"01/01/2026 📅", place:"Your House 📍", cap:"Firs ever new year w u!🎆"},
+    {img:'<img src="7.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"02/07/2026 📅", place:"Camp 📍", cap:"One of my favorites.❤️"},
+    {img:'<img src="8.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"02/15/2026 📅", place:"Somewhere 📍", cap:"First ever valentine date w u!🥳"},
+   {img:'<img src="c6ee158d-7ad3-4caa-b7fd-f6a379badaca-ezgif.com-video-to-gif-converter.gif" style="width:100%;height:100%;object-fit:cover;">', date:"12/25/2025 📅", place:"Cousins House 📍", cap:"First ever Christmas w u! 🎄"}, 
      
   ],
   reasons: [
