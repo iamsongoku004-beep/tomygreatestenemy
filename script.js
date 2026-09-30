@@ -42,7 +42,7 @@ and build a beautiful life where we can take care of and provide for our familie
 I’m so incredibly proud of you. And I know how hard you worked for this. Congratulations on passing your Board Exam, my love! 🎉❤️ 
 You deserve this moment and everything good that comes your way. I’ll always be here, cheering for you and celebrating every achievement with you.
 
-Every day kitang kamahal. And every day, pipiliin kita. ❤️
+Every day kitang mahal. And every day, pipiliin kita. ❤️
 
 Forever sounds even more beautiful when it’s with you.
 
