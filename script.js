@@ -88,9 +88,9 @@ I love you, baby. Today, tomorrow, and in all the days that come after. ❤️`,
     "Because simply put… you're you. ♾️"
   ],
   quiz: [
-    {q:"What is my favorite food? 🍽️", opts:["Adobo","Sinigang","Sisig","Dinuguan"], correct:1},
+    {q:"What is my favorite food? 🍽️", opts:["Adobo","Sisig","Sinigang","Dinuguan"], correct:1},
     {q:"What was my biggest fear? 😂", opts:["Drowning","Breaking up w u","Loosing money","ALL of the above, obviously"], correct:3},
-    {q:"What's my favorite way to spend a Dayoff? ☀️", opts:["Sleeping till noon","Adventures with you","Watching all day","Cleaning (lol)"], correct:1},
+    {q:"What's my favorite way to spend a Dayoff? ☀️", opts:["Sleeping till noon","Watching all day","Adventures with you","Cleaning (lol)"], correct:1},
     {q:"What do I call you when I'm being extra affectionate? 🥰", opts:["Babe","Baby","My person","All of the above"], correct:3},
     {q:"What's the one thing I always steal from you? 😌", opts:["Your Food","Your hoodies","Your phone charger","ALL of the above"], correct:3}
   ],
