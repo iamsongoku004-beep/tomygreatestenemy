@@ -41,7 +41,8 @@ Forever sounds good with you. ❤️`,
     "I'm really lucky to have you. 🍀"
   ],
   photos: [ // replace <div> with <img src="..."> for real photos
-    {img:'<img src="1.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Our first date 📅", place:"That little café 📍", cap:"Where it all began ☕"},    {img:'<div style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)"></div>', date:"Summer day 📅", place:"The beach 📍", cap:"You, the sea, perfection 🌊"},
+    {img:'<img src="1.jpg" style="width:100%;height:100%;object-fit:cover;">', date:"Our first date 📅", place:"That little café 📍", cap:"Where it all began ☕"},    
+    {img:'<div style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)"></div>', date:"Summer day 📅", place:"The beach 📍", cap:"You, the sea, perfection 🌊"},
     {img:'<div style="background:linear-gradient(135deg,#f6d365,#fda085)"></div>', date:"Movie night 📅", place:"Your couch 📍", cap:"You fell asleep in 10 min 😴😂"},
     {img:'<div style="background:linear-gradient(135deg,#84fab0,#8fd3f4)"></div>', date:"Road trip 📅", place:"Everywhere & nowhere 📍", cap:"Wrong turns, right person 🚗"},
     {img:'<div style="background:linear-gradient(135deg,#fccb90,#d57eeb)"></div>', date:"Last birthday 📅", place:"Home 📍", cap:"One of my favorite days with you 🥰"},
