@@ -22,27 +22,31 @@ I hope this little journey made you smile —
 because making you smile is my favorite thing to do.
 
 Love you endlessly. ❤️`,
-  giftMessage: `This is the most personal part…
+  giftMessage: `This is the most personal part… ❤️
 
-No gift I could wrap would ever be enough,
-because the real gift is getting to love you
-and being loved by you.
+No gift I could ever wrap would be enough, because the greatest gift in my life is getting to love you and, most of all, being loved by you.
+I appreciate every little thing you do for me—your patience, your effort, your love, and the way you always try to understand me. 
 
-I appreciate all your efforts and love for me, 
-I am sorry for being unfair sometimes and being not understandable.
-We fight but that does'nt mean I don't love you.
-I'm tring to to adjust, Im doing my best.
+I’m sorry for the times I’ve been unfair, difficult to understand, or when I let our emotions get the best of us. 
+We may fight and have misunderstandings sometimes, but please know that none of those moments could ever change how deeply I love you.
 
-I promise you that I'm going to give back and bring joy to your life.
-I just love you so much,
+I’m still learning. I’m trying to adjust, to understand you better, and to become a better partner for you. I may not always get things right, 
+but I promise you, I’m doing my best because you are worth every effort.
 
-Baby, I want to be with you forever. Make memories,
-be successful with you. Travel the worlds and provide to our families.
-I amso proud of you and  I knowyou pass your Board Exaam so CONGRATULATIONS!!
+I promise that one day, I’ll give back all the love you’ve given me and fill your life with the same happiness, comfort, and love that you’ve brought into mine. 
+I just love you so, so much. ❤️
 
-Everyday kitang love! 
+Baby, I want to be with you forever. I want us to make countless beautiful memories together, grow together, become successful together, travel the world, 
+and build a beautiful life where we can take care of and provide for our families.
 
-Forever sounds good with you. ❤️`,
+I’m so incredibly proud of you. And I know how hard you worked for this. Congratulations on passing your Board Exam, my love! 🎉❤️ 
+You deserve this moment and everything good that comes your way. I’ll always be here, cheering for you and celebrating every achievement with you.
+
+Every day kitang kamahal. And every day, pipiliin kita. ❤️
+
+Forever sounds even more beautiful when it’s with you.
+
+I love you, baby. Today, tomorrow, and in all the days that come after. ❤️`,
   balloonMessages: [
     "You make me laugh. 😂",
     "I love your smile. 😊",
@@ -84,11 +88,11 @@ Forever sounds good with you. ❤️`,
     "Because simply put… you're you. ♾️"
   ],
   quiz: [
-    {q:"What is my favorite food? 🍽️", opts:["Adobo","Sinigang","Sisig","Dinuguan"], correct:2},
+    {q:"What is my favorite food? 🍽️", opts:["Adobo","Sinigang","Sisig","Dinuguan"], correct:1},
     {q:"What was my biggest fear? 😂", opts:["Drowning","Breaking up w u","Loosing money","ALL of the above, obviously"], correct:3},
-    {q:"What's my favorite way to spend a Dayoff? ☀️", opts:["Sleeping till noon","Adventures with you","Watching all day","Cleaning (lol)"], correct:2},
-    {q:"What do I call you when I'm being extra affectionate? 🥰", opts:["Babe","Baby","My person","All of the above"], correct:4},
-    {q:"What's the one thing I always steal from you? 😌", opts:["Your Food","Your hoodies","Your phone charger","ALL of the above"], correct:4}
+    {q:"What's my favorite way to spend a Dayoff? ☀️", opts:["Sleeping till noon","Adventures with you","Watching all day","Cleaning (lol)"], correct:1},
+    {q:"What do I call you when I'm being extra affectionate? 🥰", opts:["Babe","Baby","My person","All of the above"], correct:3},
+    {q:"What's the one thing I always steal from you? 😌", opts:["Your Food","Your hoodies","Your phone charger","ALL of the above"], correct:3}
   ],
   wrongResponses: ["Hmmmm… suspicious. 🤨 Try again.","Are you sure about that? 😏","The audacity! 😂 Try again.","Baby. BABY. 😭 Try again!"],
   bucketList: ["Watch a sunrise together 🌅","Travel somewhere new ✈️","Take more stupid pictures 📸","Try new food 🍜","Make more memories ❤️","Celebrate more birthdays 🎂","Grow together 🌱","Keep choosing each other ♾️"]
